@@ -77,10 +77,16 @@ class Person
 
       def start_conversation(person, topic)
 
-        if topic == "politic"
-        end
-
-      end
-
-    end 
-
+        if topic == "politics" 
+            person.happiness -=2
+            self.happiness -=2
+            'blah blah partisan blah lobbyist' 
+        elsif topic == "weather" 
+                person.happiness +=1
+                self.happiness +=1
+                'blah blah sun blah rain' 
+        elsif topic != "politics" || topic != "weather"
+            "blah blah blah blah blah"
+        end 
+    end
+end 

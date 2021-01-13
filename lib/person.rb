@@ -13,7 +13,7 @@ class Person
 
     def name
         @name
-    end 
+    end
     
     def happiness=(happiness)
         if happiness >=0 && happiness <= 10
@@ -58,22 +58,29 @@ class Person
 
 
     def take_bath
-        if @hygiene < 7
-          @hygiene += 4
-        else
-          @hygiene = 10
-        end
+        self.hygiene +=4
         "♪ Rub-a-dub just relaxing in the tub ♫"
       end
 
-    # def take_bath(hygiene)
-    #     if hygiene >=0 && hygiene <=6
-    #         @hygiene = hygiene + 4
-    #     elsif hygiene > 10
-    #         @hygiene =10
-    #     elsif hygiene 
-    #         @hygiene =0
-    #     end
-    #     "♪ Rub-a-dub just relaxing in the tub ♫"
-    # end
-end 
+      def work_out
+        self.happiness +=2
+        self.hygiene -= 3
+        "♪ another one bites the dust ♫"
+      end
+
+      def call_friend(friend)
+        self.happiness += 3
+        friend.happiness += 3
+        # binding.pry
+        return "Hi #{friend.name}! It's #{self.name}. How are you?"
+      end
+
+      def start_conversation(person, topic)
+
+        if topic == "politic"
+        end
+
+      end
+
+    end 
+
